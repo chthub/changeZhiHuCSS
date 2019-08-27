@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         知乎排版修改
 // @namespace    https://github.com/chthub
-// @version      1.0
+// @version      1.0.3
 // @author       CH
 // @description  修改了一些排版样式
 // @match        https://www.zhihu.com/follow
@@ -15,7 +15,7 @@
 
 (function () {
     'use strict'
-    var path = location.pathname.slice(0)
+    var path = location.pathname.slice(0);
         (function () {
             // 修改主页样式
             if (path == '/' || path == '/follow' || path == '/hot') {
@@ -31,11 +31,11 @@
                 var inner = document.querySelector('.Topstory-mainColumn')
                 inner.style.width = '100%'
                 inner.style.fontFamily = 'Times New Roman,楷体'
-                inner.style.fontSize = '24px'
+                inner.style.fontSize = '23px'
                 // 定制评论栏
                 let doCSS = document.createElement('style')
                 doCSS.innerHTML += '.RichContent-actions{height:12px !important}'
-                doCSS.innerHTML += '.VoteButton{color:#999 !importantbackground: #d8e2c8 !important}'
+                doCSS.innerHTML += '.VoteButton{color:#999 !important;background: #d8e2c8 !important}'
                 //图片和视频的显示区域大小
                 doCSS.innerHTML += '.origin_image{max-width:500px !important}'
                 doCSS.innerHTML += '.RichText-video{max-width:500px !important}'
@@ -51,7 +51,7 @@
                     }
                 }
             }
-        })()
+        })();
         (function () {
             //修改专栏样式
             if (path.match(/\/p\/\d+/g)) {
@@ -91,8 +91,8 @@
                     inner9.style.backgroundColor = '#d8e2c8'
                     // 评论栏定制
                     let doCSS = document.createElement('style')
-                    doCSS.innerHTML += '.RichContent-actions{bottom:auto !importantbackground-color: #d8e2c8 !important}'
-                    doCSS.innerHTML += '.VoteButton{color:#999 !importantbackground: none !important}'
+                    doCSS.innerHTML += '.RichContent-actions{bottom:auto !important;background-color: #d8e2c8 !important}'
+                    doCSS.innerHTML += '.VoteButton{background: #d8e2c8 !important}'
                     //图片和视频的显示区域大小
                     doCSS.innerHTML += '.origin_image{max-width:500px !important}'
                     doCSS.innerHTML += '.RichText-video{max-width:500px !important}'
@@ -100,7 +100,7 @@
                 }
 
             }
-        })()
+        })();
         (function () {
             //这里修改回答页的样式
             if (path.match(/\/question\/\d+/g)) {
@@ -128,8 +128,7 @@
                     document.getElementsByTagName('head')[0].appendChild(doCSS)
                 }
             }
-        })()
-    
+        })();
     (function () {
         // 搜索页定制
         if (path.match(/\/search?.*/g)) {
@@ -152,5 +151,5 @@
             doCSS.innerHTML += '.RichText-video{max-width:500px !important}'
             document.getElementsByTagName('head')[0].appendChild(doCSS)
         }
-    })()
+    })();
 })()

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         知乎排版修改
-// @namespace    https://github.com/chthub
-// @version      1.0.3
+// @namespace    https://github.com/chthub/changeZhiHuCSS
+// @version      1.0.4
 // @author       CH
 // @description  修改了一些排版样式
 // @match        https://www.zhihu.com/follow

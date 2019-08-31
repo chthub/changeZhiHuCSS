@@ -14,6 +14,7 @@
 * 对点赞和评论框进行定制修改
 * 修改了代码框的显示样式
 * 其它
-### 图片示例
+
+### 使用示例
 ![1.png](https://i.loli.net/2019/08/31/bPiZHzBacX5pqIA.png)
 ![2.png](https://i.loli.net/2019/08/31/gYkcaPQIrdji7FV.png)
